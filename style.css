@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY BACKGROUND */
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(212, 212, 212);
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+/* BODY BACKGROUND */
+
+#clock {
+  width: 32vw;
+  height: 32vw;
+  border: 8px solid rgb(196, 196, 196);
+  box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.5),
+    inset -4px -4px 10px rgba(67, 67, 67, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+#outer-clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outer-line-thick {
+  width: 12px;
+  height: 100%;
+  background-color: rgb(86, 125, 158);
+  position: absolute;
+}
+.outer-line-thick:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+#inner-clock-face {
+  position: absolute;
+  width: 88%;
+  height: 88%;
+  background-color: rgb(212, 212, 212);
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.outer-line-thin {
+  width: 6px;
+  height: 100%;
+  background-color: rgb(139, 139, 139);
+  position: absolute;
+}
+
+.outer-line-thin1 {
+  transform: rotate(30deg);
+}
+.outer-line-thin2 {
+  transform: rotate(60deg);
+}
+.outer-line-thin3 {
+  transform: rotate(120deg);
+}
+.outer-line-thin4 {
+  transform: rotate(150deg);
+}
+
+/* HANDS----- */
+.hand {
+  width: 50%;
+  right: 50%;
+  height: 6px;
+  background: #2f73b6;
+  position: absolute;
+  top: 50%;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand-second {
+  width: 40%;
+  background-color: rgb(59, 151, 212);
+  z-index: 2;
+}
+.hand-minute {
+  width: 36%;
+  background-color: rgb(22, 103, 141);
+  z-index: 3;
+}
+.hand-hour {
+  width: 32%;
+  background-color: rgb(209, 56, 56);
+  z-index: 4;
+}
