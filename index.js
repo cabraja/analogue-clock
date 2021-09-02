@@ -16,5 +16,4 @@ const secondHand = document.querySelector('.hand-second');
 hourHand.style.transform = `rotate(${hour*30+90}deg)`;
 minuteHand.style.transform = `rotate(${minute*6+90}deg)`;
 secondHand.style.transform = `rotate(${second*6+90}deg)`;
-
 }, 1000);
