@@ -1,3 +1,21 @@
+const text = document.getElementById('loading-text');
+
+        setTimeout(() => {
+            text.innerHTML += '.';
+            setTimeout(() => {
+                text.innerHTML += '.';
+                    setTimeout(() => {
+                    text.innerHTML += '.';
+                 }, 500);
+            }, 500);
+        }, 500);
+
+setTimeout(() => {
+    const screen = document.getElementById('loading-screen');
+
+    screen.style.opacity = '0%';
+}, 1500);
+
 setInterval(() => {
     const date = new Date();
 const hour = date.getHours();
